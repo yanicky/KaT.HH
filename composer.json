@@ -1,0 +1,6 @@
+{
+    "require": {
+        "hhvm/hhvm-autoload": "^2.0",
+        "facebook/fbmarkdown": "^1.6"
+    }
+}
