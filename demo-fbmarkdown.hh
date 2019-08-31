@@ -12,7 +12,7 @@ function render(string $markdown): string {
   return $html;
 }
 
-$markdown = file_get_contents('https://raw.githubusercontent.com/yanicky/KaT/master/README.md');
+$markdown = file_get_contents('https://raw.githubusercontent.com/yanicky/KaT.HH/master/README.md');
 
 $html = render($markdown);
 echo $html;
