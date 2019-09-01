@@ -121,7 +121,37 @@ default:
         $url = 'https://wallrpc.pirl.io';
 	break;
 }
+
+switch($CMD)
+        {
+        case "web3_clientVersion":
+        $method = "web3_clientVersion";
+        $params = [];
+        //setup request to send json via POST
+        $data = array();
+        $data['jsonrpc'] = "2.0";
+        $data['id'] = $ID;
+        $data['method'] = $method;
+        $data['params'] = $params;
+        $payload = json_encode($data);
+        //do the call
+        $jsondata = jsonCurl($url, $method, $payload);
+
         break;
+
+        case "net_version":
+        $method = "net_version";
+        $params = [];
+        //setup request to send json via POST
+        $data = array();
+        $data['jsonrpc'] = "2.0";
+        $data['id'] = $ID;
+        $data['method'] = $method;
+        $data['params'] = $params;
+        $payload = json_encode($data);
+        //do the call
+        $jsondata = jsonCurl($url, $method, $payload);
+break;
 	
 	case "eth_getBlockByNumber":
         $method = "eth_getBlockByNumber";
