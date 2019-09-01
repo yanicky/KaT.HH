@@ -28,6 +28,39 @@ foreach( $argv as $argument ) {
 if ($argc > 0) {$NL = "\n"; $RUNMODE = "cli";} else {$NL = "</br>"; $RUNMODE = "webserv";}
 
 //if requested, setup variables
+if($_REQUEST["wallet"]){
+$envvariable = "wallet" . "=" . $_REQUEST["wallet"];
+putenv($envvariable);
+}
+if($_REQUEST["CMD"]){
+$envvariable = "CMD" . "=" . $_REQUEST["CMD"];
+putenv($envvariable);
+}
+
+if($_REQUEST["id"]){
+$envvariable = "id" . "=" . $_REQUEST["id"];
+putenv($envvariable);
+}
+
+if($_REQUEST["chain"]){
+$envvariable = "chain" . "=" . $_REQUEST["chain"];
+putenv($envvariable);
+}
+
+if($_REQUEST["rpchost"]){
+$envvariable = "rpchost" . "=" . $_REQUEST["rpchost"];
+putenv($envvariable);
+}
+
+if($_REQUEST["rpcport"]){
+$envvariable = "rpcport" . "=" . $_REQUEST["rpcport"];
+putenv($envvariable);
+}
+
+if($_REQUEST["block"]){
+$envvariable = "block" . "=" . $_REQUEST["block"];
+putenv($envvariable);
+}
 
 if(getenv("id")){
 $ID = getenv("id");
