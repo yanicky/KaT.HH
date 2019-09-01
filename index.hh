@@ -28,6 +28,7 @@ foreach( $argv as $argument ) {
 if ($argc > 0) {$NL = "\n"; $RUNMODE = "cli";} else {$NL = "</br>"; $RUNMODE = "webserv";}
 
 //if requested, setup variables
+/*
 if($_REQUEST["wallet"]){
 $envvariable = "wallet" . "=" . $_REQUEST["wallet"];
 putenv($envvariable);
@@ -61,7 +62,7 @@ if($_REQUEST["block"]){
 $envvariable = "block" . "=" . $_REQUEST["block"];
 putenv($envvariable);
 }
-
+*/
 if(getenv("id")){
 $ID = getenv("id");
 }
