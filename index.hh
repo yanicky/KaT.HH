@@ -6,9 +6,6 @@
 // Set Error Level
 error_reporting(0);
 
-require __DIR__ . '/vendor/hh_autoload.hh';
-include("src/minibase.hh");
-
 // To be used with hhvm-cli in console (ie: hhvm index.hh --wallet=yourwalletaddresshere)
 foreach( $argv as $argument ) {
         if( $argument == $argv[ 0 ] ) continue;
@@ -26,6 +23,16 @@ foreach( $argv as $argument ) {
 
 // Create NewLine variable based on usage
 if ($argc > 0) {$NL = "\n"; $RUNMODE = "cli";} else {$NL = "</br>"; $RUNMODE = "webserv";}
+
+include("src/minibase.hh");
+
+if(is_dir('vendor')){
+        require __DIR__ . '/vendor/hh_autoload.hh';
+}else{
+        echo "Dependencies not installed, please run:" . $NL . "composer.phar install" ;
+}
+
+
 
 //if requested, setup variables
 
