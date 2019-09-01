@@ -2,7 +2,7 @@
 [KaT](https://github.com/yanicky/KaT) implementation in hack for HHVM 
 
 ### Requirement 
-* Require a working HipHop Virtual Machine[HHVM](https://hhvm.com).
+* Require a working HipHop Virtual Machine : [HHVM](https://hhvm.com).
 * Require composer available in PATH for dependencies installation.
 
 For a complete development environment please check yanicky/[HHVM-LIVE](https://github.com/yanicky/HHVM-LIVE): a live-build config to create a bootable ISO image for web  development/deployment with [HHVM](https://hhvm.com), [NGINX](https://nginx.com) and [PHP-FPM](https://php.net) among other daemons/tools.
