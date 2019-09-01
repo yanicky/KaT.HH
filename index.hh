@@ -272,7 +272,7 @@ switch($CMD)
         if($RUNMODE == "cli"){
         echo "Running test from console, please check HOWTO.md for details". $NL;       
         } else {
-	include('test/testweb.hack');
+	include('test/test-web.hack');
 	
 	if($test!=""){echo $test;}else{ echo "No test results" . $NL . "running shell test" . $NL; $result =shell_exec("sh ./test-api.sh"); echo $result;}
 	}
