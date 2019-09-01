@@ -1,4 +1,13 @@
 {
+    "name": "yanicky/KaT.HH",
+    "description": "KaT implementation in Hacklang",
+    "keywords": ["yanicky", "KaT", "hack"],
+    "license": "MIT",
+    "extra": {
+      "branch-alias": {
+        "dev-master": "1.x-dev"
+      }
+    },
     "require": {
         "hhvm/hhvm-autoload": "^2.0",
         "facebook/fbmarkdown": "^1.6"
