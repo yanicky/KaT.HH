@@ -14,3 +14,10 @@ For a complete development environment please check yanicky/[HHVM-LIVE](https://
 3. ``` composer.phar install; ```
 
 4. ``` hhvm index.hh --CMD=howto; ```
+
+### How to
+Check the HOWTO.md or use CMD=howto for usage examples.
+
+(While some CMD and/or OPTION names might change in the future, they will be properly transitioned.)
+
+Feel free to add pull requests or fork it for your own usage.
