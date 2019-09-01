@@ -184,7 +184,7 @@ switch($CMD)
 		
 	case "getBalance":
 	// verify validity of the required variables
-	if ( $addr == "" ) {echo "url should be in format 'http(s)://hostname/path/to/index.php?wallet=youraddresshere' or using --wallet=yourwallethere from php-cli" . $NL; exit;}
+	if ( $addr == "" ) {echo "url should be in format 'http(s)://hostname/path/to/index.php?wallet=youraddresshere' or using --wallet=yourwallethere from hhvm-cli" . $NL; exit;}
 	if ( strlen($addr) != "42" ) { echo "wallet should be 42 char, including the 0x beginning" . $NL; exit;}
 	$method = "eth_getBalance";
 	$params = array($addr, "latest");
@@ -202,7 +202,7 @@ switch($CMD)
 	
 	case "getDecodedBalance":
         // verify validity of the required variables
-        if ( $addr == "" ) {echo "url should be in format 'http(s)://hostname/path/to/index.php?wallet=youraddresshere' or using --wallet=yourwallethere from php-cli" . $NL . "Address is: " . $addr . $NL; exit;}
+        if ( $addr == "" ) {echo "url should be in format 'http(s)://hostname/path/to/index.php?wallet=youraddresshere' or using --wallet=yourwallethere from hhvm-cli" . $NL . "Address is: " . $addr . $NL; exit;}
         if ( strlen($addr) != "42" ) { echo "wallet should be 42 char, including the 0x beginning" . $NL; exit;}
         $method = "eth_getBalance";
         $params = array($addr, "latest");
