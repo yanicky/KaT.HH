@@ -6,7 +6,19 @@
 // Set Error Level
 error_reporting(0);
 
-//include('external/parsedown-1.7.3/Parsedown.hack');
+require __DIR__ . '/vendor/hh_autoload.hh';
+use namespace Facebook\Markdown;
+
+function render(string $markdown): string {
+  $ast = Markdown\parse(new Markdown\ParserContext(), $markdown);
+
+  $html = (new Markdown\HTMLRenderer(
+    new Markdown\RenderContext()
+  ))->render($ast);
+
+  return $html;
+}
+
 
 function jsonCurl($myurl, $mymethod, $mypayload) 
         {
@@ -207,22 +219,22 @@ default:
 	case "readme":
         //echo "We are in Howto:" .$NL;
         $markdown = file_get_contents('https://raw.githubusercontent.com/yanicky/KaT/master/README.md');
-        $Parsedown = new Parsedown();
+        
         if($RUNMODE == "php-cli"){
 		echo $markdown;
 	} else {
-        	echo $Parsedown->text($markdown);
+        	echo render($markdown);
 	}
         break;
 		
 	case "howto":
         //echo "We are in Howto:" .$NL;
         $markdown = file_get_contents('https://raw.githubusercontent.com/yanicky/KaT/master/HOWTO.md');
-        $Parsedown = new Parsedown();
+        
         if($RUNMODE == "php-cli"){
 		echo $markdown;
 	} else {
-        	echo $Parsedown->text($markdown);
+        	echo render($markdown);
 	}
         break;
 
