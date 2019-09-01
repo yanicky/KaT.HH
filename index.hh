@@ -1,7 +1,7 @@
 <?hh
 // Tested with HHVM
 //
-// require php-curl to be installed/enabled.
+// require curl to be installed/enabled.
 
 // Set Error Level
 error_reporting(0);
