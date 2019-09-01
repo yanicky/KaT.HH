@@ -29,7 +29,7 @@ include("src/minibase.hh");
 if(is_dir('vendor')){
         require __DIR__ . '/vendor/hh_autoload.hh';
 }else{
-        echo "Dependencies not installed, please run:" . $NL . "composer.phar install" ;
+        echo "Dependencies not installed, please run:" . $NL . "composer.phar install" . $NL; exit;
 }
 
 
