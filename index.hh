@@ -123,7 +123,36 @@ switch($CMD)
         $payload = json_encode($data);
         //do the call
         $jsondata = jsonCurl($url, $method, $payload);
-break;
+	break;
+		
+	case "blockNumber":
+        $method = "eth_blockNumber";
+        $params = [];
+        //setup request to send json via POST
+        $data = array();
+        $data['jsonrpc'] = "2.0";
+        $data['id'] = $ID;
+        $data['method'] = $method;
+        $data['params'] = $params;
+        $payload = json_encode($data);
+        //do the call
+        $jsondata = jsonCurl($url, $method, $payload);
+        break;
+
+                
+        case "peerCount":
+        $method = "net_peerCount";
+        $params = [];
+        //setup request to send json via POST
+        $data = array();
+        $data['jsonrpc'] = "2.0";
+        $data['id'] = $ID;
+        $data['method'] = $method;
+        $data['params'] = $params;
+        $payload = json_encode($data);
+        //do the call
+        $jsondata = jsonCurl($url, $method, $payload);
+        break;
 	
 	case "eth_getBlockByNumber":
         $method = "eth_getBlockByNumber";
