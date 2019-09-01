@@ -9,9 +9,7 @@ error_reporting(0);
 require __DIR__ . '/vendor/hh_autoload.hh';
 include("src/minibase.hh");
 
-
-
-// To be used with php-cli in console (ie: php index.php --wallet=yourwalletaddresshere)
+// To be used with hhvm-cli in console (ie: hhvm index.hh --wallet=yourwalletaddresshere)
 foreach( $argv as $argument ) {
         if( $argument == $argv[ 0 ] ) continue;
 
@@ -27,7 +25,7 @@ foreach( $argv as $argument ) {
 }
 
 // Create NewLine variable based on usage
-if ($argc > 0) {$NL = "\n"; $RUNMODE = "php-cli";} else {$NL = "</br>"; $RUNMODE = "webserv";}
+if ($argc > 0) {$NL = "\n"; $RUNMODE = "cli";} else {$NL = "</br>"; $RUNMODE = "webserv";}
 
 //if requested, setup variables
 
@@ -88,7 +86,6 @@ switch($CHAIN){
 	break;
 
 default:
-	
 	$CHAIN="Pirl";
         $url = 'https://wallrpc.pirl.io';
 	break;
@@ -238,7 +235,7 @@ switch($CMD)
 	break;
 		
 	case "test":
-        if($RUNMODE == "php-cli"){
+        if($RUNMODE == "cli"){
         echo "Running test from console, please check HOWTO.md for details". $NL;       
         } else {
 	include('test/testweb.php');
@@ -249,9 +246,9 @@ switch($CMD)
 	
 	case "readme":
         //echo "We are in Howto:" .$NL;
-        $markdown = file_get_contents('https://raw.githubusercontent.com/yanicky/KaT/master/README.md');
+        $markdown = file_get_contents('https://raw.githubusercontent.com/yanicky/KaT.HH/master/README.md');
         
-        if($RUNMODE == "php-cli"){
+        if($RUNMODE == "cli"){
 		echo $markdown;
 	} else {
         	echo render($markdown);
@@ -260,9 +257,9 @@ switch($CMD)
 		
 	case "howto":
         //echo "We are in Howto:" .$NL;
-        $markdown = file_get_contents('https://raw.githubusercontent.com/yanicky/KaT/master/HOWTO.md');
+        $markdown = file_get_contents('https://raw.githubusercontent.com/yanicky/KaT.HH/master/HOWTO.md');
         
-        if($RUNMODE == "php-cli"){
+        if($RUNMODE == "cli"){
 		echo $markdown;
 	} else {
         	echo render($markdown);
