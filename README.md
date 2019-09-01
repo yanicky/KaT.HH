@@ -3,9 +3,9 @@
 
 ### Requirement 
 * Require a working [HHVM](https://hhvm.com) virtual machine.
-* Require composer available in PATH
+* Require composer available in PATH for dependencies installation.
 
-For a complete development environment please check [HHVM-LIVE](https://github.com/yanicky/HHVM-LIVE) a live-build config to create a bootable ISO image for [HHVM](https://hhvm.com) development.
+For a complete development environment please check yanicky/[HHVM-LIVE](https://github.com/yanicky/HHVM-LIVE): a live-build config to create a bootable ISO image for web  development/deployment with [HHVM](https://hhvm.com), [NGINX](https://nginx.com) and [PHP-FPM](https://php.net) among other daemons/tools.
 
 1. ``` git clone https://github.com/yanicky/KaT.HH;```
 
