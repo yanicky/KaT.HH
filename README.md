@@ -11,6 +11,6 @@ For a complete development environment please check [HHVM-LIVE](https://github.c
 
 2. ``` cd KaT.HH; ```
 
-3. ``` composer install; ```
+3. ``` composer.phar install; ```
 
 4. ``` hhvm index.hh --CMD=howto; ```
