@@ -1,5 +1,5 @@
 # KaT.HH
-[KaT](https://github.com/yanicky/KaT) implementation in hack for HHVM 
+[KaT](https://github.com/yanicky/KaT) implementation in hack language for HHVM 
 
 ### Requirement 
 * Require a working HipHop Virtual Machine : [HHVM](https://hhvm.com).
