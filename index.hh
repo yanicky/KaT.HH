@@ -274,7 +274,7 @@ switch($CMD)
         } else {
 	include('test/testweb.php');
 	
-	if($test!=""){echo $test;}else{ echo "No test results";}
+	if($test!=""){echo $test;}else{ echo "No test results" . $NL . "running shell test" . $NL; $result =shell_exec("sh ./test-api.sh"); echo $result;}
 	}
 	break;
 	
