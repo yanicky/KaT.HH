@@ -13,4 +13,4 @@ For a complete development environment please check [HHVM-LIVE](https://github.c
 
 3. ``` composer install; ```
 
-4. ``` hhvm demo-fbmarkdown.hh; ```
+4. ``` hhvm index.hh --CMD=howto; ```
