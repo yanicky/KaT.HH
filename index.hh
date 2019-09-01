@@ -19,8 +19,8 @@ foreach( $argv as $argument ) {
         //echo $variableName . " = " . $variableValue . "\n";
         // Optionally store the variable in $_REQUEST
         $_REQUEST[ $variableName ] = $variableValue;
-	$envvariable = $variableName . "=" . $variableValue;
-	putenv($envvariable);
+	//$envvariable = $variableName . "=" . $variableValue;
+	//putenv($envvariable);
 	//echo getenv($variableName);
 }
 
@@ -28,41 +28,41 @@ foreach( $argv as $argument ) {
 if ($argc > 0) {$NL = "\n"; $RUNMODE = "cli";} else {$NL = "</br>"; $RUNMODE = "webserv";}
 
 //if requested, setup variables
-/*
-if($_REQUEST["wallet"]){
+
+if(isset($_REQUEST["wallet"])){
 $envvariable = "wallet" . "=" . $_REQUEST["wallet"];
 putenv($envvariable);
 }
-if($_REQUEST["CMD"]){
+if(isset($_REQUEST["CMD"])){
 $envvariable = "CMD" . "=" . $_REQUEST["CMD"];
 putenv($envvariable);
 }
 
-if($_REQUEST["id"]){
+if(isset($_REQUEST["id"])){
 $envvariable = "id" . "=" . $_REQUEST["id"];
 putenv($envvariable);
 }
 
-if($_REQUEST["chain"]){
+if(isset($_REQUEST["chain"])){
 $envvariable = "chain" . "=" . $_REQUEST["chain"];
 putenv($envvariable);
 }
 
-if($_REQUEST["rpchost"]){
+if(isset($_REQUEST["rpchost"])){
 $envvariable = "rpchost" . "=" . $_REQUEST["rpchost"];
 putenv($envvariable);
 }
 
-if($_REQUEST["rpcport"]){
+if(isset($_REQUEST["rpcport"])){
 $envvariable = "rpcport" . "=" . $_REQUEST["rpcport"];
 putenv($envvariable);
 }
 
-if($_REQUEST["block"]){
+if(isset($_REQUEST["block"])){
 $envvariable = "block" . "=" . $_REQUEST["block"];
 putenv($envvariable);
 }
-*/
+
 if(getenv("id")){
 $ID = getenv("id");
 }
