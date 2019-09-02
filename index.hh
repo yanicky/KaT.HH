@@ -24,14 +24,23 @@ foreach( $argv as $argument ) {
 // Create NewLine variable based on usage
 if ($argc > 0) {$NL = "\n"; $RUNMODE = "cli";} else {$NL = "</br>"; $RUNMODE = "webserv";}
 
-include("src/minibase.hh");
+$minibase = file_get_contents('src/minibase.hack');
+eval($minibase);
+
+if(defined("HHVM_VERSION")){
 
 if(is_dir('vendor')){
         require __DIR__ . '/vendor/hh_autoload.hh';
 }else{
         echo "Dependencies not installed, please run:" . $NL . "composer.phar install" . $NL; exit;
+	}
+} else {
+if(is_dir('vendor')){
+        require __DIR__ . '/vendor/autoload.php';
+}else{
+        echo "Dependencies not installed, please run:" . $NL . "composer.phar install" . $NL; exit;
+	}
 }
-
 
 
 //if requested, setup variables
