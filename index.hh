@@ -12,13 +12,12 @@ foreach( $argv as $argument ) {
 
         $pair = explode( "=", $argument );
         $variableName = substr( $pair[ 0 ], 2 );
+        if(isset($pair[ 1 ])){
         $variableValue = $pair[ 1 ];
         //echo $variableName . " = " . $variableValue . "\n";
-        // Optionally store the variable in $_REQUEST
+        // Store the variable in $_REQUEST
         $_REQUEST[ $variableName ] = $variableValue;
-	//$envvariable = $variableName . "=" . $variableValue;
-	//putenv($envvariable);
-	//echo getenv($variableName);
+        }
 }
 
 // Create NewLine variable based on usage
